@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} | Inicio {% endblock %}
+
+{% block content %}
+<table class="w-100">
+    <thead>
+        <th>
+            <br>
+            <p>
+                <span class="nt_inicio">Desarrollo de Software</span>
+            </p>
+            <p>
+                <span class="nt_inicio_sub">
+                    Somos una empresa especializada en el desarrollo de software a media de su empresa,
+                    principalmente en entornos de programaci&oacute;n Web.
+                </span>
+            </p>
+            <p>
+                <button onclick="openURL('{% url 'productos' %}');"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect nt_btn_blue">
+                    Productos
+                </button>
+                &nbsp;&nbsp;&nbsp;
+                <button onclick="openURL('{% url 'servicios' %}');"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect nt_btn_green">
+                    Servicios
+                </button>
+            </p>
+            <br>
+            <img src="{% static 'img/inicio.png' %}" class="nt_cabecera">
+            <br><br><br>
+            <div class="mdl-grid w-100">
+                <div class="mdl-cell mdl-cell--4-col center">
+                    <div class="nt-card mdl-card mdl-shadow--2dp">
+
+                        <span class="material-icons nt_card_icon">
+                            local_police
+                        </span>
+
+                        <div class="mdl-card__actions mdl-card--border nt_card_title">
+                            Dise&#241;o Seguro
+                        </div>
+
+                        <span class="nt_card_title_sub">
+                            Trabajamos con las &Uacute;ltimas Tecnolog&iacute;as Disponibles lo que nos
+                            permite Desarrollar
+                            &#161;Sistemas 100&#37; Seguros&#33;
+                        </span>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col center">
+                    <div class="nt-card mdl-card mdl-shadow--2dp">
+
+                        <span class="material-icons nt_card_icon">
+                            rocket_launch
+                        </span>
+
+                        <div class="mdl-card__actions mdl-card--border nt_card_title">
+                            Calidad e Innovacion
+                        </div>
+
+                        <span class="nt_card_title_sub">
+                            Garantizar a los clientes la mejor calidad en la prestaci&oacute;n de nuestros
+                            servicios,
+                            invirtiendo constantemente en investigaci&oacute;n y desarrollo en &uacute;ltimas
+                            tecnolog&iacute;as
+                            para lograr un producto eficiente.
+                        </span>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col center">
+                    <div class="nt-card mdl-card mdl-shadow--2dp">
+
+                        <span class="material-icons nt_card_icon">
+                            developer_board
+                        </span>
+
+                        <div class="mdl-card__actions mdl-card--border nt_card_title">
+                            Desarrollo a medida
+                        </div>
+
+                        <span class="nt_card_title_sub">
+                            Acompa&#241;amos a tu empresa en todo el proceso, ayud&aacute;ndote a definir y modelar
+                            los
+                            procesos
+                            internos, y personalizando el software para que se adec&uacute;e perfectamente a
+                            tus
+                            necesidades.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <p>
+                <span class="nt_inicio">Todo lo que necesitas para tu Empresa</span>
+            </p>
+            <img src="{% static 'img/portada.jpg' %}" class="nt_cabecera">
+            <br><br><br>
+            <p>
+                <span class="nt_inicio_sub">
+                    Gestiona todo tu negocio con NTSOFT - BOLIVIA en una sola plataforma. Ahorra tiempo
+                    y mejora
+                    tus decisiones con una trazabilidad de la informaci&oacute;n completa.
+                </span>
+            </p>
+            <br><br>
+            <div class="nt_container2 w-100">
+                <div class="nt_item2">
+                    <div class="nt-card mdl-card mdl-shadow--2dp">
+                        <span class="material-icons nt_card_icon">
+                            record_voice_over
+                        </span>
+
+                        <div class="mdl-card__actions mdl-card--border nt_card_title">
+                            Atenci&oacute;n Personalizada
+                        </div>
+
+                        <span class="nt_card_title_sub">
+                            Contamos con soporte humano especializado para una atenci&oacute;n r&aacute;pida y eficaz
+                            en tiempo real.
+                        </span>
+                    </div>
+                </div>
+                <div class="nt_item2">
+                    <div class="nt-card mdl-card mdl-shadow--2dp">
+                        <span class="material-icons nt_card_icon">
+                            settings_suggest
+                        </span>
+
+                        <div class="mdl-card__actions mdl-card--border nt_card_title">
+                            Adaptabilidad
+                        </div>
+
+                        <span class="nt_card_title_sub">
+                            Desarrollamos nuestros sistemas adaptados a la necesidad particular de cada
+                            cliente para brindarle eficacia y eficiencia en la obtenci&oacute;n de sus
+                            objetivos.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+        </th>
+    </thead>
+</table>
+{% endblock %}

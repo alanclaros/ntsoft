@@ -1,0 +1,754 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} | Productos {% endblock %}
+
+{% block content %}
+
+<table class="w-100">
+    <thead>
+        <tr>
+            <th colspan="3" class="w-100">
+                <br>
+                <p>
+                    <span class="nt_inicio">Productos Inform&aacute;ticos</span>
+                </p>
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96">
+                <p class="nt_parrafo">
+                    La experiencia adquirida a lo largo de los a&#241;os en muchos sectores productivos junto con el
+                    conocimiento
+                    de las tecnolog&iacute;as de la
+                    informaci&oacute;n y la mejor manera de aplicarlas de una manera eficiente, ha hecho que se
+                    seleccionen en
+                    unos casos, y se dise&#241;en y desarrollen en otros, productos que resuelvan las necesidades
+                    inform&aacute;ticas y de organizaci&oacute;n de los clientes con las m&aacute;ximas garant&iacute;as
+                    de calidad y eficiencia.
+                </p>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96" id="productos_condominios">
+                <p class="nt_parrafo_blue">
+                    <span class="nt_parrafo_blue_producto">TeamWork</span> - Sistema de Administraci&oacute;n y Control
+                    de Condominios
+                </p>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96">
+                <div class="tab w-100">
+                    <button class="tab_button_select" id="tab_condominios_btn_1"
+                        onclick="openTab(event, 'tab_condominios_1')">Objetivo</button>
+                    <button class="tab_button" id="tab_condominios_btn_2"
+                        onclick="openTab(event, 'tab_condominios_2')">M&oacute;dulos</button>
+                    <button class="tab_button" id="tab_condominios_btn_3"
+                        onclick="openTab(event, 'tab_condominios_3')">Presentaci&oacute;n</button>
+                </div>
+
+                <div id="tab_condominios_1" class="tabdefault w-100">
+                    <p class="nt_parrafo">El objetivo de este sistema es el control y administración de departamentos
+                        dentro del
+                        condominio, realizando cobros por consumo de agua, gastos de expensas mensuales,
+                        gastos de mantenimiento, multas por retrasos y todos los gastos requeridos por el
+                        condominio. Contando adem&aacute;s con la impresi&oacute;n de recibos, reportes, listado de
+                        cobros,
+                        etc.
+                    </p>
+                    <p class="nt_parrafo">
+                        Tambi&eacute;n facilitar&aacute; la reserva de espacios comunes a trav&eacute;s del sitio web
+                        realizando
+                        las reservas mediante cualquier dispositivo m&oacute;vil, Tablet, PC.
+                    </p>
+                    <div class="w-98 left">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+                </div>
+
+                <div id="tab_condominios_2" class="tabcontent w-100">
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_condo_cobros.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                <span class="nt_parrafo_blue">M&oacute;dulo de Cobros</span>
+                                                <br>
+                                                El sistema realizar&aacute; cobros por cada uno de los departamentos
+                                                dentro el
+                                                condominio. Se generar&aacute; un recibo en formato PDF, que puede ser
+                                                enviado al
+                                                due&#241;o del departamento o realizar la impresi&oan del mismo; por
+                                                cada periodo de cobro.
+                                            </p>
+                                            <p class="nt_parrafo">
+                                                Se mostrar&aacute; una ventana de b&uacute;squeda de los departamentos,
+                                                con las opciones
+                                                de bloque, piso, due&#241;o del departamento, etc. Al seleccionar cada
+                                                departamento se mostrar&aacute;n
+                                                los detalles de deudas del departamento por cada periodo.
+                                            </p>
+                                            <p class="nt_parrafo">
+                                                Realizando las operaciones de cobro por cada periodo y la
+                                                impresi&oacute;n de recibos por cada periodo.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_condo_calendario.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                <span class="nt_parrafo_blue">Reserva de &Aacute;reas Comunes</span>
+                                                <br>
+                                                El sistema mostrar&aacute; un calendario con todas las &aacute;reas
+                                                comunes del condominio,
+                                                donde podr&aacute;n realizarse la reserva de estos espacios, solicitando
+                                                al administrador
+                                                esta reserva indicando la fecha y el perido de tiempo que desea reservar
+                                                una determinada &aacute;rea.
+                                            </p>
+                                            <p class="nt_parrafo">
+                                                Todos los usuarios del sistema podr&aacute;n ver este calendario para
+                                                poder ver y planificar
+                                                su reserva de una forma m&aacute; comoda, teniendo a la vista la
+                                                informaci&oacute; de todas las reservas
+                                                ya confirmadas.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_condo_recibo.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                <span class="nt_parrafo_blue">Impresi&oacute;n de Recibos</span>
+                                                <br>
+                                                El sistema mostrar&aacute; un recibo por cada periodo de Cobro en
+                                                formato PDF,
+                                                mostrando el detalle de la deuda por cada periodo y para cada
+                                                departamento.
+                                            </p>
+                                            <p class="nt_parrafo">
+                                                Este recibo puede ser enviado a cada departamento del condominio ya sea
+                                                via correo electr&oacute;nico,
+                                                WhatsApp, o mediante cualquier medio que disponga, como tambi&eacute;n
+                                                puede realizar la impresi&oacute;n del mismo.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="w-98 right">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+
+                </div>
+
+                <div id="tab_condominios_3" class="tabcontent w-100">
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2 center">
+                            <p class="nt_parrafo">
+                                <b>Presentaci&oacute;n PC</b>
+                            </p>
+                            <img src="{% static 'img/pr_condo_pc.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <p class="nt_parrafo center">
+                                <b>Presentaci&oacute;n Tablet, Celular</b>
+                            </p>
+                            <img src="{% static 'img/pr_condo_movil3.png' %}" class="nt_cabecera">
+                        </div>
+                    </div>
+                    <div class="w-98 right">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+                </div>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+
+        <!--vajilla-->
+        <tr>
+            <td colspan="3" class="w-100">&nbsp;<br><br></td>
+        </tr>
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96" id="productos_vajilla">
+                <p class="nt_parrafo_blue">
+                    <span class="nt_parrafo_blue_producto">EV-Control</span> - Sistema de Administraci&oacute;n y
+                    Control
+                    de Eventos Sociales
+                </p>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96">
+                <div class="tab w-100">
+                    <button class="tab_button_select" id="tab_vajilla_btn_1"
+                        onclick="openTab(event, 'tab_vajilla_1')">Objetivo</button>
+                    <button class="tab_button" id="tab_vajilla_btn_2"
+                        onclick="openTab(event, 'tab_vajilla_2')">M&oacute;dulos</button>
+                    <button class="tab_button" id="tab_vajilla_btn_3"
+                        onclick="openTab(event, 'tab_vajilla_3')">Presentaci&oacute;n</button>
+                </div>
+
+                <div id="tab_vajilla_1" class="tabdefault w-100">
+                    <p class="nt_parrafo">El objetivo de este sistema es el control y administración
+                        del Alquiler de Art&iacute;culos para Eventos Sociales, realizando el control de stock para cada
+                        nuevo evento, tomando en cuenta la salida de art&iacute;culos por el contrato de otros eventos,
+                        como tambi&eacute;n la vuelta de art&iacute;culos a almac&eacute;n de otros contratos.
+                    </p>
+                    <p class="nt_parrafo">
+                        Contando adem&aacute;s con la impresi&oacute;n de proformas, recibo de ventas, salida de
+                        productos de almac&eacute;n,
+                        retorno de productos a almac&eacute;n con sus respectivos costos adicionales por rotura y/o
+                        refacci&oacute;n, y una liquidaci&oacute;n de toda la deuda acumulada para el cliente.
+                    </p>
+                    <div class="w-98 left">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+                </div>
+
+                <div id="tab_vajilla_2" class="tabcontent w-100">
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_vajilla_ventas.png' %}" class="nt_cabecera">
+                            <br>
+                            <img src="{% static 'img/pr_vajilla_notificaciones.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                <span class="nt_parrafo_blue">M&oacute;dulo de Ventas</span>
+                                                <br>
+                                                El sistema realizar&aacute; el control de todos los contratos realizados
+                                                por la empresa, registrando:<br>
+                                            <ul>
+                                                <li>Preventas, proforma de art&iacute;culos para los clientes</li>
+                                                <li>Ventas, confirmaci&oacute;n del contrato</li>
+                                                <li>Salida de Almac&eacute;n, Registro de la salida de los
+                                                    art&iacute;culos de almac&eacute;n</li>
+                                                <li>Vuelta a Almac&eacute;n, retorno de los art&iacute;culos a
+                                                    almac&eacute;n</li>
+                                                <li>Finalizaci&oacute;n, cancelaci&oacute;n de la deuda total por parte
+                                                    del cliente</li>
+                                            </ul>
+
+                                            </p>
+                                            <p class="nt_parrafo">
+                                                Se mostrar&aacute;n notificaciones de aviso en el Celular o PC, con
+                                                anticipaci&oacute;n, de todos los contratos que deben ser entregados o
+                                                recogidos del evento social.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_vajilla_recibo.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                <span class="nt_parrafo_blue">Impresi&oacute;n de Recibos</span>
+                                                <br>
+                                                El sistema mostrar&aacute; un archivo PDF de impresi&oacute;n,
+                                                dependiendo el estado de la venta :
+                                            <ul>
+                                                <li>Preventa, proforma para el cliente</li>
+                                                <li>Venta, impresi&oacute;n del contrato con el cliente</li>
+                                                <li>Salida, indicando la cantidad de art&iacute;culos que salen de
+                                                    almac&eacute;n</li>
+                                                <li>Vuelta, indicanto la cantidad de art&iacute;culos que vuelven a
+                                                    almac&eacute;n, adem&aacute;s de registrar costos de rotura y
+                                                    refacci&oacute;n</li>
+                                                <li>Finalizaci&oacute;n, deuda total del cliente</li>
+                                            </ul>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="w-98 right">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+
+                </div>
+
+                <div id="tab_vajilla_3" class="tabcontent w-100">
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2 center">
+                            <p class="nt_parrafo">
+                                <b>Presentaci&oacute;n PC</b>
+                            </p>
+                            <img src="{% static 'img/pr_vajilla_pc.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <p class="nt_parrafo center">
+                                <b>Presentaci&oacute;n Tablet, Celular</b>
+                            </p>
+                            <img src="{% static 'img/pr_vajilla_movil2.png' %}" class="nt_cabecera">
+                        </div>
+                    </div>
+                    <div class="w-98 right">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+                </div>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+
+        <!--restaurantes-->
+        <tr>
+            <td colspan="3" class="w-100">&nbsp;<br><br></td>
+        </tr>
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96" id="productos_restaurantes">
+                <p class="nt_parrafo_blue">
+                    <span class="nt_parrafo_blue_producto">Al-Intante</span> - Sistema de Administraci&oacute;n y
+                    Control
+                    de Restaurantes
+                </p>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96">
+                <div class="tab w-100">
+                    <button class="tab_button_select" id="tab_restaurante_btn_1"
+                        onclick="openTab(event, 'tab_restaurante_1')">Objetivo</button>
+                    <button class="tab_button" id="tab_restaurante_btn_2"
+                        onclick="openTab(event, 'tab_restaurante_2')">M&oacute;dulos</button>
+                    <button class="tab_button" id="tab_restaurante_btn_3"
+                        onclick="openTab(event, 'tab_restaurante_3')">Presentaci&oacute;n</button>
+                </div>
+
+                <div id="tab_restaurante_1" class="tabdefault w-100">
+                    <p class="nt_parrafo">El objetivo de este sistema es el control y administraci&oacute;n
+                        de los productos ofrecidos por el resturante, dando la posibilidad de configurar cada producto,
+                        con sus respectivos aderezos y acompañantes, configurando tambi&eacute;n opciones de combos en
+                        cada producto, como ser :
+                    <ul>
+                        <li>Papas</li>
+                        <li>Refrescos</li>
+                        <li>O Cualquier otro que requiera</li>
+                    </ul>
+                    </p>
+                    <p class="nt_parrafo">
+                        Cuenta tambi&eacute;n con un control de stock de cada producto, dependiendo las configuraciones
+                        que tenga, descontando 1 o varios elementos en cada venta de un producto.
+                    </p>
+                    <div class="w-98 left">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+                </div>
+
+                <div id="tab_restaurante_2" class="tabcontent w-100">
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_restaurante_pedido1.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                <span class="nt_parrafo_blue">M&oacute;dulo de Pedidos</span>
+                                                <br>
+                                                El sistema mostrar&aacute; el detalle de las configuraciones de cada
+                                                producto, dando la opci&oacute;n al usuario de elegir los ingredientes y
+                                                acompa&#241;antes para cada producto.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_restaurante_pedido2.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                En caso de combos que tengan papas, refrescos, etc. Se mostrar&aacute;n
+                                                las opciones de agrandar cada un de estos elementos
+                                                aumentando o disminuyendo el precio del producto.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_restaurante_pedido3.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                Se mostrar&aacute;n ventanas de confirmaci&oacute;n para los
+                                                ingredientes y extras de cada producto,
+                                                dando la opci&oacute;n de quitar algunos o aumantar otros con su
+                                                respectivo costo adicional si es el caso.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="w-98 right">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+
+                </div>
+
+                <div id="tab_restaurante_3" class="tabcontent w-100">
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2 center">
+                            <p class="nt_parrafo">
+                                <b>Presentaci&oacute;n PC</b>
+                            </p>
+                            <img src="{% static 'img/pr_restaurante_pc.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <p class="nt_parrafo center">
+                                <b>Presentaci&oacute;n Tablet, Celular</b>
+                            </p>
+                            <img src="{% static 'img/pr_restaurante_movil2.png' %}" class="nt_cabecera">
+                        </div>
+                    </div>
+                    <div class="w-98 right">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+                </div>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+
+        <!--ventas-->
+        <tr>
+            <td colspan="3" class="w-100">&nbsp;<br><br></td>
+        </tr>
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96" id="productos_pvi">
+                <p class="nt_parrafo_blue">
+                    <span class="nt_parrafo_blue_producto">PVI</span> - Sistema de Ventas
+                </p>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96">
+                <div class="tab w-100">
+                    <button class="tab_button_select" id="tab_pvi_btn_1"
+                        onclick="openTab(event, 'tab_pvi_1')">Objetivo</button>
+                    <button class="tab_button" id="tab_pvi_btn_2"
+                        onclick="openTab(event, 'tab_pvi_2')">M&oacute;dulos</button>
+                    <button class="tab_button" id="tab_pvi_btn_3"
+                        onclick="openTab(event, 'tab_pvi_3')">Presentaci&oacute;n</button>
+                </div>
+
+                <div id="tab_pvi_1" class="tabdefault w-100">
+                    <p class="nt_parrafo">El objetivo de este sistema es el control y administraci&oacute;n
+                        de los productos ofrecidos por la empresa, dando la opci&oacute;n de configurar por cada
+                        producto :
+                    <ul>
+                        <li>Color</li>
+                        <li>Talla</li>
+                        <li>Marca</li>
+                        <li>Productos M&aacute;s vendidos</li>
+                        <li>Productos en Oferta</li>
+                        <li>Productos Novedosos</li>
+                    </ul>
+                    </p>
+                    <p class="nt_parrafo">
+                        Cuenta tambi&eacute;n con un control de stock de cada producto, adem&aacute; de contar con la
+                        configuraci&oacute;n de todas las im&aacute;genes y detalles que se mostrar&aacute;n a los
+                        clientes.
+                    </p>
+                    <div class="w-98 left">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+                </div>
+
+                <div id="tab_pvi_2" class="tabcontent w-100">
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_pvi_productos1.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                <span class="nt_parrafo_blue">M&oacute;dulo de Pedidos</span>
+                                                <br>
+                                                El sistema mostrar&aacute; el detalle de las configuraciones de cada
+                                                producto, permitiendo filtrar los productos por :
+                                            <ul>
+                                                <li>Color</li>
+                                                <li>Talla</li>
+                                                <li>Marca</li>
+                                                <li>O Cualquier otro criterio que tenga la empresa</li>
+                                            </ul>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2">
+                            <img src="{% static 'img/pr_pvi_productos2.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td class="w-2">
+                                            &nbsp;
+                                        </td>
+                                        <td class="w48">
+                                            <p class="nt_parrafo">
+                                                Tambien podr&aacute; configurar todas las im&aacute;genes y
+                                                descripci&oacute;n de cada producto.
+                                                Permitiendo adem&aacute;s marcar los productos :
+                                            <ul>
+                                                <li>M&aacute;s Vendidos</li>
+                                                <li>En Oferta</li>
+                                                <li>Novedades</li>
+                                            </ul>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="w-98 right">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+
+                </div>
+
+                <div id="tab_pvi_3" class="tabcontent w-100">
+                    <div class="nt_container_col2 w-100">
+                        <div class="nt_item_col2 center">
+                            <p class="nt_parrafo">
+                                <b>Presentaci&oacute;n PC</b>
+                            </p>
+                            <img src="{% static 'img/pr_pvi_pc.png' %}" class="nt_cabecera">
+                        </div>
+                        <div class="nt_item_col2">
+                            <p class="nt_parrafo center">
+                                <b>Presentaci&oacute;n Tablet, Celular</b>
+                            </p>
+                            <img src="{% static 'img/pr_pvi_movil2.png' %}" class="nt_cabecera">
+                        </div>
+                    </div>
+                    <div class="w-98 right">
+                        <p class="nt_parrafo">
+                            Para obtener m&aacute;
+                            detalles de todos los m&oacute;dulos y benificios de este sistema, dirigase a
+                            la p&aacute;gina de
+                            <a class="nt_href" href="{% url 'contacto' %}">Contacto</a>&nbsp;
+                        </p>
+                        <br><br>
+                    </div>
+                </div>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+<table class="w-100">
+    <thead>
+        <tr>
+            <th colspan="3" class="w-100">
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+            </th>
+        </tr>
+    </thead>
+</table>
+{% endblock %}

@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} | Servicios {% endblock %}
+
+{% block content %}
+<table class="w-100">
+    <thead>
+        <tr>
+            <th colspan="3" class="w-100">
+                <br>
+                <p>
+                    <span class="nt_inicio">Servicios Inform&aacute;ticos</span>
+                </p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96">
+                <br>
+                <img src="{% static 'img/servicios.png' %}" class="nt_cabecera">
+                <br><br><br>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96">
+                <p class="nt_parrafo">
+                    Nuestra empresa proporciona servicios inform&aacute;ticos altamente eficientes adem&aacute;s de un
+                    servicio
+                    integral y personalizado para todas las &aacute;reas de su empresa.
+                </p>
+                <p class="nt_parrafo">
+                    <span class="nt_parrafo_blue">NTSOFT - BOLIVIA</span> dispone de diversas unidades de negocio
+                    ampliamente especializadas en ofrecer soluciones y
+                    servicios inform&aacute;ticos eficientes en su correspondiente &aacute;rea de trabajo. Ofrece,
+                    adem&aacute;s, la
+                    posibilidad de un servicio integral, en lo que a Tecnolog&iacute;as de la Informaci&oacute;n se
+                    refiere, desde el
+                    dise&#241;o del plan de sistemas de informaci&oacute;n hasta la implantaci&oacute;n y mantenimiento
+                    de los mismos, para
+                    que cualquier empresa u organizaci&oacute;n pueda contar con la soluci&oacute;n inform&aacute;tica
+                    adecuada y &oacute;ptima en
+                    todo momento, y en l&iacute;nea con sus objetivos.
+                </p>
+            </td>
+            <td class="w-2 v-bottom">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="w-2 v-top">&nbsp;</td>
+            <td class="w-96" id="servicios_desarrollo">
+                <div class="nt_container_col2 w-100">
+                    <div class="nt_item_col2">
+                        <img src="{% static 'img/desarrollo_software.jpg' %}" class="nt_cabecera">
+                    </div>
+                    <div class="nt_item_col2">
+                        <table class="w-100">
+                            <tbody>
+                                <tr>
+                                    <td class="w-2">
+                                        &nbsp;
+                                    </td>
+                                    <td class="w48">
+                                        <p class="nt_parrafo">
+                                            <span class="nt_parrafo_blue">Desarrollo de Software</span>
+                                            Somos una empresa especializada en el desarrollo de software, principalmente
+                                            en entornos de programación Web, Python-Django, PHP, React.
+                                        </p>
+                                        <p class="nt_parrafo">
+                                            Trabajamos en desarrollo de productos o en proyectos para la
+                                            obtenci&oacute;n de
+                                            aplicaciones a medida de las necesidades de nuestros clientes. Seguimos en
+                                            todos los casos una metodolog&iacute;a de desarrollo, optando por SCRUM
+                                            en funci&oacute;n de la tipolog&iacute;a del proyecto, y aplicando los
+                                            procedimientos y
+                                            controles de nuestro sistema de gesti&oacute;n de la Calidad. Buscamos
+                                            utilidad y
+                                            eficacia a la hora de garantizar perfectos resultados.
+                                        </p>
+                                        <p class="nt_parrafo">
+                                            Esto se traduce para el cliente en una mayor agilidad en la obtenci&oacute;n
+                                            de sus
+                                            aplicaciones, un mantenimiento m&aacute;s f&aacute;cil y econ&oacute;mico, y
+                                            un mayor rendimiento
+                                            y calidad de dichas aplicaciones, al ser constantes la evolución y pruebas
+                                            de los elementos en que se basan.
+
+                                        </p>
+                                        <p class="nt_parrafo">Si est&aacute;s
+                                            pensando en llevar a cabo un proyecto de desarrollo de software a medida en
+                                            tu empresa, cons&uacute;ltanos sin compromiso.
+                                            <a class="nt_href" href="{% url 'contacto' %}">Contactanos</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td class="w-2 v-bottom">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96" id="servicios_consultoria">
+                <div class="nt_container_col2 w-100">
+                    <div class="nt_item_col2">
+                        <img src="{% static 'img/consultoria_informatica.jpg' %}" class="nt_cabecera">
+                    </div>
+                    <div class="nt_item_col2">
+                        <table class="w-100">
+                            <tbody>
+                                <tr>
+                                    <td class="w-2">
+                                        &nbsp;
+                                    </td>
+                                    <td class="w48">
+                                        <p class="nt_parrafo">
+                                            <span class="nt_parrafo_blue">Consultor&iacute;a Inform&aacute;tica</span>
+                                            Una buena elecci&oacute;n y asesoramiento sobre los sistemas y herramientas
+                                            inform&aacute;ticas que han de dar soporte a una organizaci&oacute;n es
+                                            esencial para que
+                                            &eacute;sta se mantenga en constante rendimiento.
+                                        </p>
+                                        <p class="nt_parrafo">
+                                            Nuestros profesionales ponen nuestra alta experiencia al servicio del
+                                            Cliente para asistirle con las mejores opciones a implantar. El fin es
+                                            conseguir una perfecta alineaci&oacute;n entre los objetivos de la
+                                            organizaci&oacute;n y
+                                            las capacidades de sus sistemas inform&aacute;ticos.
+
+                                            Estamos capacitados para poder seleccionar la arquitectura y herramientas
+                                            m&aacute;s
+                                            adecuadas en cada caso, que sirvan a la organizaci&oacute;n para sacar el
+                                            m&aacute;ximo
+                                            provecho de una manera eficiente, y al m&aacute;s largo plazo posible.
+                                        </p>
+                                        <p class="nt_parrafo">
+                                            Despu&eacute;s de ello, y siguiendo nuestra filosof&iacute;a de ofrecer un
+                                            servicio
+                                            global, nuestros equipos especializados de trabajo podr&aacute;n planificar,
+                                            desarrollar (si fuera necesario) y poner en marcha el equipamiento
+                                            inform&aacute;tico &oacute;ptimo.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td class="w-2 v-bottom">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="w-2">&nbsp;</td>
+            <td class="w-96" id="servicios_gestion">
+                <div class="nt_container_col2 w-100">
+                    <div class="nt_item_col2">
+                        <img src="{% static 'img/gestion_sistemas.jpg' %}" class="nt_cabecera">
+                    </div>
+                    <div class="nt_item_col2">
+                        <table class="w-100">
+                            <tbody>
+                                <tr>
+                                    <td class="w-2">
+                                        &nbsp;
+                                    </td>
+                                    <td class="w48">
+                                        <p class="nt_parrafo">
+                                            <span class="nt_parrafo_blue">Gesti&oacute;n de Sistemas</span>
+                                            Desde el estudio de las necesidades del cliente, pasando por el dise&#241;o
+                                            de su
+                                            infraestructura tecnol&oacute;gica, implantaci&oacute;n y posterior soporte
+                                            y
+                                            mantenimiento inform&aacute;tico de sus sistemas, nuestra empresa te brinda
+                                            todas
+                                            las soluciones posibles para tu modelo de negocio.
+                                        </p>
+                                        <p class="nt_parrafo">Y lo montamos en tus
+                                            instalaciones o en cloud (en la nube), seg&uacute;n tus necesidades y
+                                            requisitos.
+                                            Hoy en d&iacute;a las comunicaciones y sistemas inform&aacute;ticos tienen
+                                            un peso vital
+                                            en todas las empresas, en busca de la optimizaci&oacute;n de recursos que
+                                            mejoren
+                                            la producci&oacute;n.
+                                        </p>
+                                        <p class="nt_parrafo">Por ello es imprescindible contar con un partner
+                                            tecnol&oacute;gico
+                                            que se implique a fondo en todas las fases de desarrollo de un proyecto:
+                                            estudio, implantaci&oacute;n, seguimiento y mantenimiento. Desde Soporte de
+                                            primer
+                                            nivel hasta Consultor&iacute;a de sistemas; disponemos de un amplio
+                                            cat&aacute;logo de
+                                            contratos y modalidades: bolsa de horas, tarifa plana, asistencia de alta
+                                            disponibilidad (24x7), contrato de mantenimiento a medida… <span
+                                                class="nt_parrafo_blue">Simplemente nos
+                                                adaptamos a tu negocio y necesidades.</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td class="w-2">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="w-100">
+    <thead>
+        <tr>
+            <th colspan="3" class="w-100">
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+            </th>
+        </tr>
+    </thead>
+</table>
+
+{% endblock %}

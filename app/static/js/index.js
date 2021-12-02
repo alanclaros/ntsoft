@@ -30,13 +30,6 @@ function sendMessage(tipo) {
         return false;
     }
 
-    // const data = { message: 'Example Message # ', timeout: 3000 };
-    // snackbarContainer.MaterialSnackbar.showSnackbar(data);
-
-    // const tr_load = document.getElementById('tr_loading');
-    // console.log('tr...', tr_load);
-    // tr_load.style.display = 'block';
-
     const imagen = document.forms['form_contacto'].elements['ruta_img'].value;
     const url_main = document.forms['form_contacto'].elements['url_main'].value;
     const token = document.forms['form_contacto'].elements['csrfmiddlewaretoken'].value;
@@ -117,20 +110,4 @@ function openTab(evt, tabName) {
     //btn
     const tab_btn = document.getElementById(nombre_tab + '_btn_' + numero_tab);
     tab_btn.className = 'tab_button_select';
-
-
-    // let i, tabcontent, tablinks;
-    // tabcontent = document.getElementsByClassName("tabcontent");
-    // for (i = 0; i < tabcontent.length; i++) {
-    //     tabcontent[i].style.display = "none";
-    // }
-    // tablinks = document.getElementsByClassName("tablinks");
-    // for (i = 0; i < tablinks.length; i++) {
-    //     tablinks[i].className = tablinks[i].className.replace(" active", "");
-    // }
-    // document.getElementById(tabName).style.display = "block";
-    // evt.currentTarget.className += " active";
 }
-
-// Get the element with id="defaultOpen" and click on it
-//document.getElementById("defaultOpen").click();

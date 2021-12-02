@@ -161,20 +161,7 @@
         </main>
     </div>
 
-    <form name="form_index" method="get" action="{% url 'index' %}">
-        <input type="hidden" name="action" value="index">
-    </form>
-    <form name="form_productos" method="get" action="{% url 'productos' %}">
-        <input type="hidden" name="action" value="productos">
-    </form>
-    <form name="form_servicios" method="get" action="{% url 'servicios' %}">
-        <input type="hidden" name="action" value="serivicios">
-    </form>
-    <form name="form_contacto" method="get" action="{% url 'contacto' %}">
-        <input type="hidden" name="action" value="contacto">
-    </form>
-
-    <i id="nt_message" class="material-icons pointer nt_contact">comment</i>
+    <i id="nt_message" class="material-icons pointer nt_contact" onclick="openURL('{% url 'contacto' %}');">comment</i>
 
     <script src="{% static 'js/material.min.js' %}"></script>
     <script src="{% static 'js/jquery.min.js' %}"></script>

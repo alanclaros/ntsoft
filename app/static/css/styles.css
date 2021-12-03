@@ -209,6 +209,10 @@
   background-color: #F0F0F0;
 }
 
+.dialog_padding{
+  padding: 0;
+}
+
 /* top-left border-radius */
 .table3 tr:first-child th:first-child{
   border-top-left-radius: 6px;
@@ -472,6 +476,22 @@
 
 .nt_btn_blue:focus{
     background-color: #0247E8;
+}
+
+.nt_btn_silver{
+  background-color: #CCCCCC;
+  color: #000000;
+}
+.nt_btn_silver:hover{
+  background-color: #BBBBBB;
+  color: #333333;
+}
+.nt_btn_silver:active{
+  background-color: #BBBBBB;
+}
+
+.nt_btn_silver:focus{
+    background-color: #BBBBBB;
 }
 
 .nt_btn_green{

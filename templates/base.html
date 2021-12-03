@@ -31,6 +31,7 @@
         href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{% static 'css/material.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dialog-polyfill.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <style>
 
@@ -161,10 +162,83 @@
         </main>
     </div>
 
-    <i id="nt_message" class="material-icons pointer nt_contact" onclick="openURL('{% url 'contacto' %}');">comment</i>
+    <!-- <i id="nt_message" class="material-icons pointer nt_contact" onclick="openURL('{% url 'contacto' %}');">comment</i> -->
+    <i id="nt_message" class="material-icons pointer nt_contact" onclick="showContactDialog();">comment</i>
+
+    <dialog id="dialogContact" class="mdl-dialog">
+        <div class="mdl-dialog__content dialog_padding">
+            <form name="form_contacto_index" method="post" action="" onsubmit="return false;">
+                {% csrf_token %}
+                <table class="w-100 table3">
+                    <thead>
+                        <tr>
+                            <th>Formulario de Contacto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="back1">
+                            <td class="left">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label w-100">
+                                    <input class="mdl-textfield__input" type="text" id="nombreIndex" name="nombreIndex">
+                                    <label class="mdl-textfield__label" for="nombreIndex">&#42; Nombre</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="back2">
+                            <td class="left">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label w-100">
+                                    <input class="mdl-textfield__input" type="text" id="telefonosIndex"
+                                        name="telefonosIndex">
+                                    <label class="mdl-textfield__label" for="telefonosIndex">&#42;
+                                        Tel&eacute;fonos</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="back1">
+                            <td class="left">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label w-100">
+                                    <textarea class="mdl-textfield__input" type="text" rows="3" id="mensajeIndex"
+                                        name="mensajeIndex"></textarea>
+                                    <label class="mdl-textfield__label" for="mensajeIndex">&#42; Mensaje</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="tr_loading_index" style="display: none;">
+                            <td id="td_loading_index" class="center w-100">
+                                <img src="{% static 'img/loading.gif' %}">
+
+                            </td>
+                        </tr>
+                        <tr class="back2">
+                            <td class="center">
+                                <button id="contact-btn_index" onclick="sendMessageIndex('form');"
+                                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect nt_btn_green">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Enviar&nbsp;&nbsp;&nbsp;&nbsp;
+                                </button>
+                                <div id="contact-toast_index" class="mdl-js-snackbar mdl-snackbar">
+                                    <div class="mdl-snackbar__text"></div>
+                                    <button class="mdl-snackbar__action" type="button"></button>
+                                </div>
+                                <input type="hidden" name="url_main" id="url_main" value="{% url 'send_message' %}">
+                                <input type="hidden" name="ruta_img" id="ruta_img"
+                                    value="{% static 'img/loading.gif' %}">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button onclick="closeContactDialog();"
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect nt_btn_silver">
+                Cerrar
+            </button>
+        </div>
+    </dialog>
 
     <script src="{% static 'js/material.min.js' %}"></script>
     <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/dialog-polyfill.js' %}"></script>
     <script src="{% static 'js/index.js' %}"></script>
     {% block js_modulo %}
     {% endblock %}

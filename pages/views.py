@@ -71,6 +71,7 @@ def send_message(request):
         nombre = request.POST['nombre']
         telefonos = request.POST['telefonos']
         mensaje = request.POST['mensaje']
+        operation_x = request.POST['operation_x']
         respuesta = 'ok'
 
     except Exception as ex:
@@ -108,7 +109,8 @@ def send_message(request):
 
     context = {
         'page': 'send_message',
-        'respuesta': respuesta
+        'respuesta': respuesta,
+        'operation_x': operation_x,
     }
 
     return render(request, 'pages/send_message.html', context)

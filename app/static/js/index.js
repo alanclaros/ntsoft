@@ -120,6 +120,15 @@ function showContactDialog() {
         dialogPolyfill.registerDialog(dialog);
     }
 
+    document.getElementById('nombreIndex').value = '';
+    document.getElementById('telefonosIndex').value = '';
+    document.getElementById('mensajeIndex').value = '';
+
+    $("#td_loading_index").html('&nbsp;');
+    $("#tr_loading_index").fadeOut('slow');
+    const contactBtn = document.getElementById('contact-btn_index');
+    contactBtn.disabled = false;
+
     dialog.showModal();
 }
 
@@ -175,7 +184,7 @@ function sendMessageIndex(tipo) {
         'csrfmiddlewaretoken': token,
     }
 
-    $("#td_loading").load(url_main, datos, function () {
+    $("#td_loading_index").load(url_main, datos, function () {
         resultadoMensajeIndex();
     });
 

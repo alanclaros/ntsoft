@@ -64,6 +64,24 @@ def acerca_de(request):
 
     return render(request, 'pages/acerca_de.html', context)
 
+def politica_privacidad(request):
+    context = {
+        'page': 'politica_privacidad'
+    }
+    return render(request, 'pages/politica_privacidad.html', context)
+
+def terminos(request):
+    context = {
+        'page': 'terminos'
+    }
+    return render(request, 'pages/terminos.html', context)
+
+def eliminacion_datos(request):
+    context = {
+        'page': 'eliminacion_datos'
+    }
+    return render(request, 'pages/eliminacion_datos.html', context)
+
 
 def send_message(request):
 

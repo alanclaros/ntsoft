@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$5$5g4uvru9p!&y-hptlg!b$ui6q=ce(gk#sli^y(47!r7@-0a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.0.18']
+ALLOWED_HOSTS = ['127.0.0.1', '24.199.80.82', 'ntsoft-bolivia.com', 'www.ntsoft-bolivia.com', 'cx-bot.ntsoft-bolivia.com', 'medical.ntsoft-bolivia.com']
 CURRENT_HOST = '127.0.0.1'
 HOST_FULL_PATH = '127.0.0.1:8000'
 SUB_URL_EMPRESA = 'ntsoft'
@@ -154,9 +154,24 @@ else:
     # nombre de los cookies por sitio web
     SESSION_COOKIE_NAME = SUB_URL_EMPRESA
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'app/static')
 ]
+
+# 1. De dónde saca Django tus estilos originales (Asegúrate de que esta carpeta exista y tenga tus CSS)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'app/static')
+]
+
+# 2. La URL con la que el navegador web solicitará los archivos
+STATIC_URL = '/static/'
+
+# 3. La carpeta ÚNICA dentro del contenedor donde Django unificará todo en producción
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_production')
+
 
 # media folders settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

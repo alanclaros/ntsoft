@@ -7,3 +7,4 @@ setuptools==58.4.0
 sqlparse==0.4.2
 typing_extensions==4.0.1
 wheel==0.37.0
+gunicorn
